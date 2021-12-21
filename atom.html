@@ -1,0 +1,129 @@
+<h1>Gestion d'un projet sur github via Atom</h1>
+
+<h2>I. Introduction</h2>
+
+<p>Atom a été développé par GitHub en tant qu'éditeur de texte. Facebook a ensuite développé les projets Nuclide6 et Atom IDE pour transformer Atom en un environnement de développement intégré (IDE), mais le développement s'est arrêté en décembre 2018.</p>
+
+<p>Lorsque vous utilisez Git dans le cadre de votre flux de travail, il peut être très utile d'avoir un accès facile à une interface graphique pour accélérer vos processus.Il existe un grand nombre d'interfaces graphiques Git parmi lesquelles choisir, mais si vous utilisez Atom comme éditeur de code, vous n'aurez pas à aller bien loin pour trouver des options solides. </p>
+<p> Je vais vous montrer comment utiliser l'interface graphique de <b>Atom</b> pour interagir facilement avec Git sur vos repo <b>Github</b>.</p>
+
+<p>Voici la liste des actions de bases qu'on va voir dans ce tuto :</p>
+
+<ul>
+  <li>1.Initialiser un repo </li>
+  <li>2.Cloner un repo</li>
+  <li>3.Branche</li>
+  <li>4.Modifications </li>
+  <li>5.Annuler les modifications ;</li>
+  <li>6.Commit </li>
+  <li>7.Publish et push</li>
+  <li>8.Fetch et pull</li>
+  <li>9.Résoudre des conflits</li>
+  <li>10.Pull request</li>
+</ul>
+
+<p>La plupart des fonctionnalités résident dans les éléments du dock Git et GitHub.</p>
+
+<h2>1.Initialiser un repo</h2>
+<p>Si un projet n'a pas encore de repo Git, vous pouvez en créer un à partir du panneau Git.</p>
+<p><img src="images/github-initialize.png" style="width: 50%"></p>
+
+
+<h2>2.Cloner un repo</h2>
+<p>Pour cloner un référentiel, ouvrez le panneau GitHub alors qu'aucun dossier de projet n'est ouvert dans Atom et cliquez sur "Cloner un référentiel GitHub existant". Dans la boîte de dialogue, collez l'URL d'un référentiel et cliquez sur « Cloner ». Le nouveau projet sera ajouté à l'arborescence.</p>
+<p><img src="images/github-clone.png" style="width: 50%"></p>
+<p><img src="images/github-clone1.png" style="width: 50%"></p>
+
+<h2>3.Branche</h2>
+<p>Pour ouvrir l'info-bulle de branche, cliquez sur l'icône de branche dans la barre d'état. De là, vous pouvez créer ou changer de branche.</p>
+<p><img src="images/github-branch.png" style="width: 50%"></p>
+
+<h2>4.Modifications</h2>
+<p>Après avoir apporté quelques modifications, mettez en <b>Stage</b> tout ce que vous voulez faire partie du prochain commit. Options du Stage :</p>
+<ul>
+  <li><b>Tous les changements</b> : Cliquez sur le bouton "Stage All" dans la barre "Unstaged Changes".</li>
+  <li><b>Fichiers</b> : double-cliquez sur un fichier ou sélectionnez un fichier et appuyez sur Enter.</li>
+  <li><b>Morceau </b> : Cliquez sur le bouton "Stage Hunk" ou sélectionnez un morceau et appuyez sur Enter.</li>
+  <li><b>Lignes </b> : Cliquez sur une ligne (ou faites glisser sur plusieurs lignes) pour la sélectionner, puis cliquez sur le bouton "Stage selection". Ou utilisez la Cmd-/touche pour basculer du mode gros morceau au mode ligne, puis appuyez Ctrl-Enter pour Stage une seule ligne.</li>
+</ul>
+
+<p>Utilisez la touche Ctrl-Left ou Ctrl-Right pour basculer entre la liste des fichiers et les différentes vue. Le déclassement peut se faire de la même manière.</p>
+<p><img src="images/github-stage.png" style="width: 50%"></p>
+
+<h2>5.Annuler les modifications</h2>
+<p>Si vous ne souhaitez plus conserver certaines modifications, vous pouvez les supprimer. C'est similaire à Stage, mais accessible derrière un menu contextuel.</p>
+<ul>
+  <li><b>Toutes les modifications </b> : Cliquez sur le "..."dans le menu « Unstaged Changes » et choisissez « Discard All Changes »..</li>
+  <li><b>Fichiers</b> : Faites un clic droit sur un fichier (ou plusieurs) et choisissez "Discard Changes".</li>
+  <li><b>Morceau </b> : Cliquez sur l'icône de la corbeille dans la barre supérieure d'un morceau..</li>
+  <li><b>Lignes </b> : Faites un clic droit sur une ligne (ou plusieurs) et choisissez "Discard Selection".</li>
+</ul>
+<p><img src="images/github-discard.png" style="width: 50%"></p>
+
+<h2>6.Commit</h2>
+ <h3>6.1.Aperçu du Commit</h3>
+
+<p>Pour vérifier <b>toutes les modifications apportées</b> à votre prochain commit, cliquez sur le bouton <b>"See All Staged Changes"</b> au-dessus de la boîte de message de commit. Il vous permet de voir toutes vos "Staged changes" dans un seul volet. Cet "aperçu du commit" peut également servir d'inspiration pour rédiger le message de commit.</p>
+<p><img src="images/github-commit-preview.png" style="width: 50%"></p>
+
+<h3>6.2.Commit</h3>
+
+<p>Une fois que vous avez mis en "Stage" vos modifications, saisissez un message pour le commit. N'hésitez pas à décrire le commit plus en détail après avoir laissé une ligne vide. Finalisez en cliquant sur le bouton Valider . Si vous avez besoin de plus d'espace, cliquez sur l'icône de développement en bas à droite. Il ouvrira un éditeur de commit au centre.</p>
+<p><img src="images/github-commit.png" style="width: 50%"></p>
+
+<p>Pour ajouter plusieurs co-auteurs à un commit, cliquez sur l'icône "👤➕" dans le coin inférieur gauche de l'éditeur de message de commit. Vous pouvez désormais rechercher par nom, e-mail ou nom d'utilisateur GitHub pour créditer un co-auteur.</p>
+<p><img src="images/github-commit-with-co-authors.png" style="width: 50%"></p>
+
+<h3>6.3.Modifier et annuler les Commits</h3>
+
+<p>Si vous avez oublié de commit une modification et que vous souhaitez l'ajouter à votre commit précédente, faites un clic droit sur le dernier commit, puis choisissez <b>"Amend"</b> dans le menu contextuel.</p>
+<p><img src="images/github-amend.png" style="width: 50%"></p>
+
+<p>Si vous souhaitez modifier le message de commit de votre dernier commit, ou ajouter/supprimer des modifications, cliquez sur le bouton "Undo". Il reviendra à l'état juste avant que vous ayez cliqué sur le bouton de validation.</p>
+<p><img src="images/github-undo.png" style="width: 50%"></p>
+
+<h3>6.4.Afficher les commits</h3>
+
+<p>Une fois que vous avez effectué quelques commits, cliquez sur un message de commit dans la liste des commits récents pour voir le message de commit associé à chacun</p>
+<p><img src="images/github-commit-detail.png" style="width: 50%"></p>
+
+<h3>7.Publish et push</h3>
+
+<p>Lorsque vous êtes prêt à partager vos modifications avec les membres de votre équipe, cliquez sur le bouton <b>Publish</b> dans la barre d'état. Il poussera votre branche locale vers le repo distant. Après avoir effectué plusieurs commits, vous pouvez également <b>Push</b> à partir de la barre d'état.</p>
+<p><img src="images/github-publish-push.png" style="width: 50%"></p>
+
+<h3>8.Fetch et pull</h3>
+
+<p>De temps en temps, c'est une bonne idée de cliquer sur le bouton <b>Fetch</b> pour voir si un autre membre de l'équipe a poussé les changements. Si tel est le cas, cliquez sur <b>Pull</b> pour fusionner(<i>merge</i>) les modifications dans votre branche locale.</p>
+<p><img src="images/github-fetch-pull.png" style="width: 50%"></p>
+
+<h3>9.Résoudre des conflits</h3>
+
+<p>Parfois, il peut y avoir des conflits lors de la tentative de <i>merge</i>. Les fichiers qui ont des conflits de <i>merge</i> apparaîtront dans la liste <i>"Merge Conflicts"</i>. Cliquez sur un fichier pour ouvrir l'éditeur. Là, vous pouvez résoudre le conflit en choisissant une version ou en apportant d'autres modifications. Une fois cela fait, mettez le fichier en <b>Stage</b> et <b>Commit</b>.</p>
+<p><img src="images/github-resolve-conflicts.png" style="width: 50%"></p>
+
+<h3>10.Pull Request</h3>
+<h4>10.1.Créer un Pull Request</h4>
+
+<p>Lorsque vos modifications sont prêtes à être examinées par les membres de votre équipe, ouvrez le panneau "GitHub" Ctrl+8 et cliquez sur <b>Open new pull request</b> . Cela ouvrira le navigateur dans lequel vous pourrez continuer à créer un <b>Pull request</b>. Si les commits n'ont pas été poussés ou que la branche n'est pas encore <i>Publish</i>, le package GitHub le fera automatiquement pour vous.</p>
+<p><img src="images/github-create-a-pull-request.png" style="width: 50%"></p>
+
+<h4>10.2.Afficher un Pull Request</h4>
+
+<p>Une fois le <i>Pull request</i> créé, elle apparaîtra sous <i>Checked out pull request</i> en haut du panneau. En dessous se trouve une liste des <i>Pull request</i> déjà efectués. Il vous permet de trouver rapidement une pull request par avatar, titre ou numéro de PR. Il vous permet également de garder un œil sur l'état du CI. En cliquant sur un <i>Pull request</i> dans la liste, un volet central s'ouvre avec plus de détails, la chronologie et les conversations.</p>
+<p><img src="images/github-view-pull-requests.png" style="width: 50%"></p>
+
+<h4>10.3.Checkout un Pull Request</h4>
+
+<p>Pour tester un pull request localement, ouvrez-la dans le centre de l'espace de travail en cliquant sur la pull request dans la liste "open pull request" de l'onglet GitHub, puis cliquez sur le bouton <b>Checkout</b> . Il créera automatiquement une branche locale et extraira toutes les modifications. Si vous souhaitez contribuer à cette pull request, commencez à apporter des modifications, validez et poussez. Votre contribution fait désormais partie de cette pull request.</p>
+<p><img src="images/github-checkout.png" style="width: 50%"></p>
+
+
+<h4>10.4.Révision d'un Pull request</h4>
+
+<p>Pour faire la révision sur un pull request, ouvrez l'onglet <i>Reviews</i> à partir du bouton <b>See Reviews</b> du pied de page d'un volet de pull request. Alternativement, si le pull request a déjà été <i>checker</i>, l'onglet <i>Avis</i> peut également être ouvert à partir du même bouton sur l'onglet GitHub.</p>
+<p><img src="images/github-see-review.png" style="width: 50%"></p>
+
+<h4>III.Pour conclure</h4>
+
+<p>Voilà, vous avez les armes pour apprehender l'interface graphique de git et travailler avec vos projet github directement dans l'éditeur Atom. D'après mon expérience, cela rend le travail avec Git plus agréable, fluide et efficace.En attendant de se familiariser avec les commandes du terminal, car biensur ce qui font de nous de vrai developer , cool, c'est de savoir jouer avec le terminal comme s'il était notre Meilleur Ami!</p>
